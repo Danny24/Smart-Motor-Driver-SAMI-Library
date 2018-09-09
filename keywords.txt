@@ -1,0 +1,36 @@
+SAMI_2BRobots	KEYWORD1
+begin	           KEYWORD1
+getID      	KEYWORD2
+getAddress      	KEYWORD2
+setAddress      	KEYWORD2
+isRunning      	KEYWORD2
+Run        	KEYWORD2
+getIOWPU      	KEYWORD2
+setIOWPU      	KEYWORD2
+getMode      	KEYWORD2
+setMode      	KEYWORD2
+SAVE       	KEYWORD2
+RESET      	KEYWORD2
+getGear      	KEYWORD2
+setGear      	KEYWORD2
+getDiameter     	KEYWORD2
+setDiameter     	KEYWORD2
+getRPM     	KEYWORD2
+getSpeed     	KEYWORD2
+setSpeed     	KEYWORD2
+getDistance     	KEYWORD2
+setDistance     	KEYWORD2
+getRPM_PID_KP   	KEYWORD2
+getRPM_PID_KD   	KEYWORD2
+getRPM_PID_KI   	KEYWORD2
+setRPM_PID_KP   	KEYWORD2
+setRPM_PID_KD   	KEYWORD2
+setRPM_PID_KI   	KEYWORD2
+getATS_PID_KP   	KEYWORD2
+getATS_PID_KD   	KEYWORD2
+getATS_PID_KI   	KEYWORD2
+setATS_PID_KP   	KEYWORD2
+setATS_PID_KD   	KEYWORD2
+setATS_PID_KI   	KEYWORD2
+
+
