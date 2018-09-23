@@ -78,8 +78,8 @@ class SAMI_2BRobots {
   void setIOWPU ( uint8_t value );
   uint8_t getMode( void );
   void setMode ( uint8_t value );
-  void SAVE ();
-  void RESET ();
+  void SAVE ( void );
+  void RESET ( void );
   int16_t getGear( void );
   void setGear ( int16_t value );
   int16_t getDiameter( void );
