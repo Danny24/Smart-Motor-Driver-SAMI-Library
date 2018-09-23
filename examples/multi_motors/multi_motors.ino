@@ -78,30 +78,5 @@ void setup()
 
 void loop()
 {
-  while (1);
-  m1.setDistance(400);
-  m2.setDistance(-400);
-  m1.setSpeed(100);
-  m2.setSpeed(100);
-  m1.Run(1);
-  m2.Run(1);
-  do
-  {
-    delay(50);
-  }
-  while (m1.isRunning() || m2.isRunning());
-  delay(500);
-  m1.setSpeed(50);
-  m2.setSpeed(50);
-  m1.setDistance(80);
-  m2.setDistance(80);
-  m1.Run(1);
-  m2.Run(1);
-  delay(100);
-  do
-  {
-    delay(50);
-  }
-  while (m1.isRunning() || m2.isRunning());
-  delay(500);
+
 }
