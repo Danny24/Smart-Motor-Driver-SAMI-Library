@@ -1,3 +1,8 @@
+//This code also requires arduino-pid-autotuner by jackw01
+//You can download a working copy from https://github.com/Danny24/arduino-pid-autotuner
+//And them install into Arduino IDE
+//This library was modified to also work in non-AVR boards, this is why I am not including the original library repository
+ 
 #include <PIDAutotuner.h>
 #include "SAMI_2BRobots.h"
 
