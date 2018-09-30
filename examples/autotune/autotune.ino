@@ -32,10 +32,10 @@ void setup() {
   Serial.println("Running auto-tunner");
   Serial.println("First where are going to tune motor Speed...");
 
-  int loopInterval = 10000;
-  int target = 100; //this value must be half of the RPM the motor is capable of deliver
-  int range_min = -1023;
-  int range_max = 1023;
+  int loopInterval = 5000;
+  int target = 100; //this value must be half of the RPM the motor is capable of deliver or also the most common speed user will require
+  int range_min = -1023; //min PWM value
+  int range_max = 1023; //max PWM value
 
   // Set the target value to tune to
   // This will depend on what you are tuning. This should be set to a value within
@@ -110,8 +110,8 @@ void setup() {
   motor.setDistance(0);
   motor.Run(1); //Start motor
   target = 1000; //target distance, doesn't matter just assign a realistic value diferent to 0
-  range_min = -200; //motor maximun capable speed backwards
-  range_max = 200; //motor maximun capable speed fordwards
+  range_min = -200; //motor maximun capable speed backwards or also most common speed required by user
+  range_max = 200; //motor maximun capable speed fordwards or also most common speed required by user
 
   // Set the target value to tune to
   // This will depend on what you are tuning. This should be set to a value within

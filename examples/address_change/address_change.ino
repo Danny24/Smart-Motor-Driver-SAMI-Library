@@ -1,6 +1,6 @@
 #include "SAMI_2BRobots.h"
 #define old_address 0x24
-#define new_address 0x28
+#define new_address 0x25
 
 SAMI_2BRobots motor = SAMI_2BRobots(); //create object from library class
 

@@ -31,17 +31,16 @@ void setup()
   Serial.print("ATS_PID_KD: "); Serial.println(motor.getATS_PID_KD(), 4);
   Serial.print("ATS_PID_KI: "); Serial.println(motor.getATS_PID_KI(), 4);
 
-  motor.setMode(4); //motor PID enabled, auto-stop PID enabled and safe direction toggle disabled mode select
-  motor.setDistance(1000); //move 1000 mm until auto-stop triggers
-  motor.setSpeed(80); //move fordward at 80 RPM's
+  motor.setMode(2); //motor PID enabled, auto-stop PID disabled and safe direction toggle disabled mode select
   motor.setGear(150); //motor gearbox relation 150:1
   motor.setDiameter(70); //wheel diameter is 70 mm
-  motor.setRPM_PID_KP(1.79); //set gains for motor RPM PID control
-  motor.setRPM_PID_KD(19.74);
-  motor.setRPM_PID_KI(0.12);
-  motor.setATS_PID_KP(27.44); //set gains for auto-stop PID control
-  motor.setATS_PID_KD(129.97);
-  motor.setATS_PID_KI(3.98);
+  motor.setSpeed(80); //move fordward at 80 RPM's
+  motor.setRPM_PID_KP(1.81); //set gains for motor RPM PID control
+  motor.setRPM_PID_KD(11.73);
+  motor.setRPM_PID_KI(0.18);
+  motor.setATS_PID_KP(5.65); //set gains for auto-stop PID control
+  motor.setATS_PID_KD(0.87);
+  motor.setATS_PID_KI(0.0000);
   Serial.println("Re-configuration done, hold a sec...");
   //motor.SAVE(); //uncoment to save this parameters, we highly recommend using autotune before this test and use gains obtained there
 
@@ -54,9 +53,9 @@ void loop()
 {
   do
   {
-    Serial.print("Remaining Distance: "); Serial.println(motor.getDistance());
+    Serial.print("Total Moved Distance: "); Serial.println(motor.getDistance());
     Serial.print("Motor actual RPM's: "); Serial.println(motor.getRPM());
-    Serial.print("Iterations running: "); Serial.println(motor.isRunning());
+    Serial.print("Motor is running: "); Serial.println(motor.isRunning());
     Serial.println(" ");
     delay(100);
   }
