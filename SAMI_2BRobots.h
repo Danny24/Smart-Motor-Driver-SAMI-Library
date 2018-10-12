@@ -88,7 +88,9 @@ class SAMI_2BRobots {
   int16_t getSpeed( void );
   void setSpeed ( int16_t value );
   int32_t getDistance( void );
-  void setDistance(int32_t value); 
+  void setDistance ( int32_t value );
+  int32_t getAngle( void );
+  void setAngle(int32_t value); 
   float getRPM_PID_KP( void );
   void setRPM_PID_KP(float value); 
   float getRPM_PID_KD( void );

@@ -109,6 +109,17 @@ void SAMI_2BRobots::setDistance(int32_t value) {
      	write32(SAMI_REG_DISTANCE_0, (uint32_t)value);
 }
 
+int32_t SAMI_2BRobots::getAngle(void) {
+   	int32_t value = (int32_t)read32(SAMI_REG_DISTANCE_0);
+     	value = (int32_t) ((double)(360*(double)value)/(3*(double)getGear()));
+	return value;
+}
+
+void SAMI_2BRobots::setAngle(int32_t value) {
+     value = (int32_t) (((double)(3*(double)getGear())/360)*(double)value);
+     	write32(SAMI_REG_DISTANCE_0, (uint32_t)value);
+}
+
 float SAMI_2BRobots::getRPM_PID_KP(void) {
 	conv temp;
      	temp.i = read32(SAMI_REG_RPM_PID_KP_0);

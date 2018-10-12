@@ -20,6 +20,8 @@ getSpeed     	KEYWORD2
 setSpeed     	KEYWORD2
 getDistance     	KEYWORD2
 setDistance     	KEYWORD2
+getAngle     	KEYWORD2
+setAngle     	KEYWORD2
 getRPM_PID_KP   	KEYWORD2
 getRPM_PID_KD   	KEYWORD2
 getRPM_PID_KI   	KEYWORD2
