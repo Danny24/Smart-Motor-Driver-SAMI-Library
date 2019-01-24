@@ -57,6 +57,10 @@ motor.getDistance(); //gets the desired distance to run the motor or the total t
 
 motor.setDistance();  //sets the desired distance to run the motor before auto-stop triggers 
 
+motor.getAngle(); //gets the desired degrees to run the motor or the total traveled distance since start
+
+motor.setAngle();  //sets the desired degrees to run the motor before auto-stop triggers 
+
 motor.getRPM_PID_KP(); //gets gains
 
 motor.setRPM_PID_KP(); //sets gains 
