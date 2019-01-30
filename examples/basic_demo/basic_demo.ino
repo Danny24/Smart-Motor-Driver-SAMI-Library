@@ -32,6 +32,7 @@ void setup()
   Serial.print("ATS_PID_KI: "); Serial.println(motor.getATS_PID_KI(), 4);
 
   motor.setMode(2); //motor PID enabled, auto-stop PID disabled and safe direction toggle disabled mode select
+  motor.inverted(false); //if you want to swap motor CCW and CW directions set this to true, very useful when building robots with multiple motors
   motor.setGear(150); //motor gearbox relation 150:1
   motor.setDiameter(70); //wheel diameter is 70 mm
   motor.setSpeed(80); //move fordward at 80 RPM's
