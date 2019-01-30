@@ -1,6 +1,7 @@
 SAMI_2BRobots	KEYWORD1
 begin	           KEYWORD1
 getID      	KEYWORD2
+inverted      	KEYWORD2
 getAddress      	KEYWORD2
 setAddress      	KEYWORD2
 isRunning      	KEYWORD2

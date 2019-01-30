@@ -29,6 +29,10 @@ uint8_t SAMI_2BRobots::getID(void) {
 	return read8(SAMI_REG_ID);
 }
 
+void SAMI_2BRobots::inverted(bool value) {
+     _reversed = value;
+}
+
 uint8_t SAMI_2BRobots::getAddress(void) {
 	return read8(SAMI_REG_ADDRESS);
 }
@@ -86,36 +90,61 @@ int16_t SAMI_2BRobots::getDiameter(void) {
 }
 
 int16_t SAMI_2BRobots::getSpeed(void) {
-	return read16(SAMI_REG_SPEED_L);
+     if(_reversed) {
+        return read16(SAMI_REG_SPEED_L) * -1;
+     }
+     else {
+	   return read16(SAMI_REG_SPEED_L);
+     }
 }
 
 void SAMI_2BRobots::setSpeed(int16_t value) {
+     if(_reversed) {
+        value = value * -1;
+     }
 	write16(SAMI_REG_SPEED_L, value);
 }
 
 int16_t SAMI_2BRobots::getRPM(void) {
-	return read16(SAMI_REG_RPM_L);
+     if(_reversed) {
+        return read16(SAMI_REG_RPM_L) * -1;
+     }
+     else {
+	   return read16(SAMI_REG_RPM_L);
+     }
 }
 
 int32_t SAMI_2BRobots::getDistance(void) {
    	int32_t value = (int32_t)read32(SAMI_REG_DISTANCE_0);
      	value = (int32_t) ((double)(3.1416*(double)  		     			getDiameter())*((double)(((double)value)/
            (3*(double)getGear()))));
+      if(_reversed) {
+        value = value * -1;
+      }
 	return value;
 }
 
 void SAMI_2BRobots::setDistance(int32_t value) {
+     if(_reversed) {
+        value = value * -1;
+     }
      value = (int32_t) (3*(double)getGear()*((double)(((double)		     value)/(3.1416*(double)getDiameter()))));
      	write32(SAMI_REG_DISTANCE_0, (uint32_t)value);
 }
 
 int32_t SAMI_2BRobots::getAngle(void) {
    	int32_t value = (int32_t)read32(SAMI_REG_DISTANCE_0);
-     	value = (int32_t) ((double)(360*(double)value)/(3*(double)getGear()));
+     	value = (int32_t) ((double)(360*(double)value)/(3*(double)          getGear()));
+      if(_reversed) {
+        value = value * -1;
+      }
 	return value;
 }
 
 void SAMI_2BRobots::setAngle(int32_t value) {
+     if(_reversed) {
+        value = value * -1;
+     }
      value = (int32_t) (((double)(3*(double)getGear())/360)*(double)value);
      	write32(SAMI_REG_DISTANCE_0, (uint32_t)value);
 }

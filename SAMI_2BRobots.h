@@ -70,6 +70,7 @@ class SAMI_2BRobots {
   SAMI_2BRobots();
   boolean begin(uint8_t a = SAMI_I2CADDR_DEFAULT);
   uint8_t getID( void );
+  void inverted( bool value = false );
   uint8_t getAddress( void );
   void setAddress ( uint8_t value );
   uint8_t isRunning( void );
@@ -114,5 +115,6 @@ class SAMI_2BRobots {
   uint8_t read8(uint8_t reg);
 
  private:
-  uint8_t _i2caddr;
+  uint8_t _i2caddr = SAMI_I2CADDR_DEFAULT;
+  bool _reversed = false;
 };
