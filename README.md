@@ -21,6 +21,8 @@ There is also this functions to control SAMI, please check documentation and exa
 
 motor.getAddress(); //return I2C address
 
+motor.inverted(bool); //allows to swap motor direction CCW and CW in software. Set true or false.
+
 motor.setAddress (address); //set I2C address, it requires SAVE and RESET before changes takes efect
 
 motor.isRunning(); //returns 1 or 0 indicating if the motor is running or not
